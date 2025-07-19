@@ -4,20 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="./decode.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous" />
+
     <title>Decoder</title>
   </head>
   <body>
-    <div class="main-content">
-      <textarea
-        rows="4"
-        cols="50"
-        type="text"
-        name="decode"
-        id="decode-input"
-        value=""
-      ></textarea>
-      <button class="decode-btn">Decode</button>
+    <div class="container">
+      <h1 class="text-center mt-5">Decoder</h1>
+      <p class="text-center">Enter the encoded string below to decode it.</p>
+      <div class="main-content">
+        <div class="needs-validation">
+          <input
+            type="text"
+            rows="4"
+            cols="40"
+            type="text"
+            name="decode"
+            id="decode-input"
+            class="form-control m-3 w-100"
+            placeholder="Enter the encoded string here"
+            required>
+          </input>
+          <button class="decode-btn btn btn-primary m-3">Decode</button>
+      
+      <div class="script-result m-3 w-100"></div>
+          
+        </div>
     </div>
-    <div class="script-result"></div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"></script>
   </body>
 </html>
