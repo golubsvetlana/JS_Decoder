@@ -1,8 +1,20 @@
 let btn = document.querySelector('.decode-btn');
 let slctElem = document.querySelector('#encode_select');
 const firstInput = document.querySelector('#decode-input');
+const clearBtn = document.querySelector('.clear-btn');
+
+clearBtn.addEventListener('click', function () {
+  firstInput.value = '';
+  const result = document.querySelector('.script-result');
+  result.innerHTML = '';
+});
 
 btn.addEventListener('click', decodeBase64);
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+      decodeBase64()
+    }
+});
 
 function decodeBase64() {
   const decodeInput = decodeURIComponent(firstInput.value);
@@ -29,6 +41,6 @@ function decodeBase64() {
   } catch (error) {
       const result = document.querySelector('.script-result');
       result.innerHTML = `<h3>${error}</h3>`;
-      result.style.color = 'red';
-  }
+    result.style.color = 'red';
+     }
 }
